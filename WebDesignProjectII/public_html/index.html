@@ -4,102 +4,155 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Universidad Técnica Nacional</title>
+        <title>Segundo Proyecto Web UTN</title>
+        <link href="CSS/Estilos.css" rel="stylesheet">
+        <link href="CSS/bootstrap.css" rel="stylesheet">
         <link href="CSS/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-        <script src="JavaScript/bootstrap.min.js"></script>
-        <script type="text/javascript" src="JavaScript/bootstrap.js"></script>
+        <link rel="stylesheet" href="CSS/style.css">
+
     </head>
-    <body>
+    
+    <body class="">
+        
+        <div class="container">
+            <img id="logo" src="Imagenes/Logo.png" class="center-block" alt="Imagen responsive" >
+            <h2 class = "text-center"> Universidad Tecnica Nacional</h2>
+        </div>
+        <br/>
         <div class="container">
             <div id="content">
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <ul id="tabs" class="nav nav-justified" data-tabs="tabs">
                     <li class="active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
                     <li><a href="#carreras" data-toggle="tab">Carreras</a></li>
                     <li><a href="#estudiantes" data-toggle="tab">Estudiantes</a></li>
                     <li><a href="#usuarios" data-toggle="tab">Usuarios</a></li>
-                    <li><a href="#acercade" data-toggle="tab">Acerca de..</a></li>
                 </ul>
                 <div id="my-tab-content" class="tab-content">
                     <div class="tab-pane active" id="dashboard">
                         <h1>Dashboard</h1>
-                        <p>Informacion</p>
+                        <p>Información Importante</p>
                     </div>
-                    <div class="tab-pane" id="carreras">
+                    <div class="tab-pane" id="carreras"> 
                         <div class="container"> 
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    <h3>Lista de Carreras</h3>
-                                    <h5>Opciones</h5>
-                                    <div class="btn-group">
-                                        <button class="btn btn-success btn-sm">Nuevo</button>
-                                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                                        <button class="btn btn-warning btn-sm">Editar</button>
-                                        <button class="btn btn-info btn-sm">Ver detalles</button>
-                                    </div>
-                                </div>
-                            </div>	
-                        </div>    
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    <div class="table-responsive">
-                                        <table class="table table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>Código</th>
-                                                    <th>Nombre</th>
-                                                    <th>Sede</th>
+                            <div class="row"> 
+                                <div class="col-xs-12"> 
+                                    <h1>Lista de carreras</h1> 
+                                    <button class="btn-success btn-sm" data-toggle="modal" data-target="#nuevacarrera">Nuevo</button> 
+                                    <div class="modal fade"  id="nuevacarrera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                                                    <h4>Agregar carrera</h4>
+                                                    <div class="modal-body">
+                                                        <form id="frmAgregarCarrera">
+                                                            <div class="form-group">
+                                                                <label for="txtCodCarrera">Código de la carrera:</label>
+                                                                <input type="text" class="form-control" id="txtCodCarrera"
+                                                                       placeholder="Codigo de la carrera">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="txtNombreCarrera">Nombre de la carrera:</label>
+                                                                <input type="text" class="form-control" id="txtNombreCarrera" 
+                                                                       placeholder="Nombre de la carrera">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="txtSede">Sede:</label>
+                                                                <input type="text" class="form-control" id="txtSede" 
+                                                                       placeholder="Nombre de la carrera">
+                                                            </div>
+                                                            <input type="submit" value="Agregar">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div> </div> 
+                        <br/>
+                        <div id="divLista" class="container"> 
+                            <div class="row"> 
+                                <div class="col-xs-8"> 
+                                    <div class="table-responsive"> 
+                                        <table id="tblTablaCarreras" class="table table table-hover table-bordered table-striped table-condensed "> 
+                                            <thead> 
+                                                <tr class="bg-success"> 
+                                                    <th>Código</th> 
+                                                    <th>Nombre</th> 
+                                                    <th>Sede</th> 
+                                                    <th>Opciones</th>
                                                 </tr>
-                                            </thead>
+                                            </thead> 
                                             <tbody>
-                                                <tr>
-                                                    <td>ISW</td>
-                                                    <td>Ingenieria en Sistemas</td>
-                                                    <td>San Carlos</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>CONTI</td>
-                                                    <td>Contabilidad y Finanzas</td>
-                                                    <td>Central</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>ADMAD</td>
-                                                    <td>Administración Aduanera</td>
-                                                    <td>Pacífico</td>
-                                                </tr>
+
                                             </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        </table> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
                     </div>
                     <div class="tab-pane" id="estudiantes">
                         <div class="container"> 
                             <div class="row">
                                 <div class="col-xs-8">
-                                    <h3>Lista de estudiantes</h3>
-                                    <h5>Opciones</h5>
+                                    <h1>Lista de estudiantes</h1>
                                     <div class="btn-group">
-                                        <button class="btn btn-success btn-sm">Nuevo</button>
-                                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                                        <button class="btn btn-warning btn-sm">Editar</button>
-                                        <button class="btn btn-info btn-sm">Ver detalles</button>
+                                        <button class="btn-success btn-sm" data-toggle="modal" data-target="#nuevoEstudiante">Nuevo</button>
+                                        <div class="modal fade"  id="nuevoEstudiante" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                                                        <h4>Agregar estudiante</h4>
+                                                        <div class="modal-body">
+                                                            <form id="frmAgregarEstudiante">
+                                                                <div class="form-group">
+                                                                    <label for="txtCedulaEstudiante">Cédula:</label>
+                                                                    <input type="text" class="form-control" id="txtCedulaEstudiante"
+                                                                           placeholder="Cédula">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="txtNombreEstudiante">Nombre:</label>
+                                                                    <input type="text" class="form-control" id="txtNombreEstudiante" 
+                                                                           placeholder="Nombre">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="txtApellidosEstudiante">Apellidos:</label>
+                                                                    <input type="text" class="form-control" id="txtApellidosEstudiante" 
+                                                                           placeholder="Nombre del estudiante">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="txtCarreraEstudiante">Carrera:</label>
+                                                                    <input type="text" class="form-control" id="txtCarreraEstudiante" 
+                                                                           placeholder="Nombre de la carrera">
+                                                                </div>
+                                                                <div>
+                                                                    <label for="txtNivelIngles">Niv.Ingles</label>
+                                                                    <input type="text" class="form-control" id="txtNivelIngles" 
+                                                                           placeholder="Nivel de Ingles">
+                                                                </div>
+                                                                <br/>
+                                                                <input type="submit" value="Agregar">
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>	
-                        </div>    
-                        <div class="container">
+                        </div>
+                        <br/>
+                        <div id="tablaEstudiantes" class="container">
                             <div class="row">
                                 <div class="col-xs-8">
                                     <div class="table-responsive">
-                                        <table class="table table table-hover">
-                                            <thead>
-                                                <tr>
+                                        <table id="tblTablaEstudiantes" class="table table table-hover table-bordered table-striped table-condensed">
+                                            <thead >
+                                                <tr id="0" class="bg-success">
                                                     <th>Cédula</th>
                                                     <th>Nombre</th>
                                                     <th>Apellidos</th>
@@ -108,27 +161,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1-0568-0098</td>
-                                                    <td>Marcos</td>
-                                                    <td>González</td>
-                                                    <td>18</td>
-                                                    <td>Ingenieria en Software</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2-0549-0349</td>
-                                                    <td>Pedro</td>
-                                                    <td>Picapiedra</td>
-                                                    <td>19</td>
-                                                    <td>Contabilidad y finanzas</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3-0987-0231</td>
-                                                    <td>Pablo</td>
-                                                    <td>Mármol</td>
-                                                    <td>21</td>
-                                                    <td>Administración Aduanera</td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -140,56 +173,32 @@
                         <div class="container"> 
                             <div class="row">
                                 <div class="col-xs-8">
-                                    <h3>Lista de Usuarios</h3>
-                                    <h5>Opciones</h5>
-                                    <div class="btn-group">
-                                        <button class="btn btn-success btn-sm">Nuevo</button>
-                                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                                        <button class="btn btn-warning btn-sm">Editar</button>
-                                        <button class="btn btn-info btn-sm">Ver detalles</button>
-                                    </div>
+                                    <h1>Lista de usuarios</h1>
                                 </div>
                             </div>	
-                        </div>    
-                        <div class="container">
+                        </div>
+                        <br/>
+                        <div id="tablaUsuarios" class="container">
                             <div class="row">
                                 <div class="col-xs-8">
                                     <div class="table-responsive">
-                                        <table class="table table table-hover">
-                                            <thead>
-                                                <tr>
+                                        <table class="table table table-hover table-bordered table-striped table-condensed">
+                                            <thead >
+                                                <tr id="0" class="bg-success">
                                                     <th>Cédula</th>
                                                     <th>Nombre</th>
                                                     <th>Apellidos</th>
-                                                    <th>Usuario</th>
-                                                    <th>Contraseña</th>
-                                                    <th>Role</th>
+                                                    <th>Edad</th>
+                                                    <th>Privilegios</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1-0568-0098</td>
-                                                    <td>Mauricio</td>
-                                                    <td>Rojas</td>
-                                                    <td>maro</td>
-                                                    <td>********</td>
-                                                    <td>Director de Carrera</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2-0549-0349</td>
-                                                    <td>Jose</td>
-                                                    <td>Guzman</td>
-                                                    <td>jogu</td>
-                                                    <td>********</td>
-                                                    <td>Rector</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3-0987-0231</td>
-                                                    <td>Andrey</td>
-                                                    <td>Tejeda</td>
-                                                    <td>ante</td>
-                                                    <td>********</td>
-                                                    <td>Tesoreria</td>
+                                                    <td>1234567</td>
+                                                    <td>Petro</td>
+                                                    <td>Nila</td>
+                                                    <td>99</td>
+                                                    <td>Conserje</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -197,10 +206,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane" id="acercade">
-                        <h1>Información</h1>
-                        <p>StudentsDatabase1.0</p>
                     </div>
                 </div>
             </div>
@@ -210,5 +215,7 @@
                 $('#tabs').tab();
             });
         </script> 
+        <script type="text/javascript" src="JavaScript/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="JavaScript/bootstrap.js"></script>
     </body>
 </html>
