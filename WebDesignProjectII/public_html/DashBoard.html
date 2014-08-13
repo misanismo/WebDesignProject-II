@@ -45,7 +45,7 @@
 
                         <br/>
 
-                        
+
 
                         <div id="dashLista">
                             <article>
@@ -77,7 +77,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                                                <h4 class="page-header">Agregar carrera</h4>
+                                                <h4 class="text-center">Agregar carrera</h4>
                                                 <div class="modal-body">
                                                     <form id="frmAgregarCarrera">
                                                         <div class="form-group">
@@ -100,7 +100,7 @@
                                                                 <option>San Carlos</option>
                                                             </select>
                                                         </div>
-                                                        <button id="btnAgregarCarrera" class="btn btn-info" type="button">Agregar</button>
+                                                        <button id="btnAgregarCarrera" class="btn btn-info center-block" type="button">Agregar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -117,7 +117,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                                                <h4 class="panel page-header">Editar carrera</h4>
+                                                <h4 class="text-center">Editar carrera</h4>
                                                 <div class="modal-body">
                                                     <form id="frmEditarCarrera">
                                                         <div class="form-group">
@@ -140,7 +140,7 @@
                                                                 <option>San Carlos</option>
                                                             </select>
                                                         </div>
-                                                        <button id="btnEditarCarrera" type="button" class="btn btn-info">Aplicar cambios</button>
+                                                        <button id="btnEditarCarrera" type="button" class="btn btn-info center-block">Editar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -181,7 +181,7 @@
                         </div>
 
 
-                        <div class="input-group col-xs-6" id="grbtn1">
+                        <div class="input-group col-xs-5" id="grbtn1">
 
                             <span class="input-group-btn">
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevacarrera">Nuevo</button>
@@ -212,7 +212,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                                                    <h4 class="page-header">Agregar estudiante</h4>
+                                                    <h4 class="text-center">Agregar estudiante</h4>
                                                     <div class="modal-body">
                                                         <form id="frmAgregarEstudiante">
                                                             <div class="form-group">
@@ -251,11 +251,12 @@
                                                                     <option>Nivel Avanzado</option>
                                                                 </select>
                                                             </div>
+                                                            <button id="btnAgregarEstudiante" type="button" class="btn btn-info center-block">Agregar</button>
                                                         </form>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button id="btnAgregarEstudiante" type="button" class="btn btn-info">Agregar</button>
-                                                    </div>
+
+
+
                                                 </div>
                                             </div>
                                         </div> 
@@ -268,7 +269,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                                                    <h4 class="page-header">Editar estudiante</h4>
+                                                    <h4 class="text-center">Editar estudiante</h4>
                                                     <div class="modal-body">
                                                         <form id="frmEditarEstudiante">
                                                             <div class="form-group">
@@ -307,13 +308,13 @@
                                                                     <option>Nivel Avanzado</option>
                                                                 </select>
                                                             </div>
-
+                                                            <button id="btnEditarEstudiante" type="button" data-dismiss="modal" class="btn btn-info center-block">Editar</button>
                                                         </form>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button id="btnEditarEstudiante" type="button" data-dismiss="modal" class="btn btn-info">Agregar</button>
-                                                        <button id="btnCancelarEstudianteEditar" type="button" class="btn btn-info" data-dismiss="modal">Salir</button>
-                                                    </div>
+
+
+
+
                                                 </div>
                                             </div>
                                         </div> 
@@ -350,7 +351,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group col-xs-6" id="grbtn2">
+                        <div class="input-group col-xs-5" id="grbtn2">
                             <span class="input-group-btn">
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevoEstudiante">Nuevo</button>
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editarEstudiante">Editar</button> 
@@ -381,7 +382,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                                                    <h4 class="page-header">Agregar usuarios</h4>
+                                                    <h4 class="text-center">Agregar usuarios</h4>
                                                     <div class="modal-body">
                                                         <form id="frmAgregarUsuario">
                                                             <div class="form-group">
@@ -415,11 +416,12 @@
                                                                 <input type="password" class="form-control" id="txtContrasennaUsuario" 
                                                                        placeholder="Contraseña">
                                                             </div>
+                                                            <button class="btn btn-info center-block" id="btnAgregarUsuario" type="button" >Agregar</button>
                                                         </form>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn btn-info" id="btnAgregarUsuario" type="button" >Agregar</button>
-                                                    </div>
+
+                                                    
+
                                                 </div>
                                             </div>
                                         </div> 
@@ -432,7 +434,7 @@
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                                                    <h4 class="page-header">Editar usuarios</h4>
+                                                    <h4 class="text-center">Editar usuarios</h4>
                                                     <div class="modal-body">
                                                         <form id="frmAgregarUsuario">
                                                             <div class="form-group">
@@ -466,11 +468,12 @@
                                                                 <input type="password" class="form-control" id="txtContrasennaUsuarioEditar" 
                                                                        placeholder="Contraseña">
                                                             </div>
+                                                            <button class="btn btn-info center-block" id="btnEditarUsuario" type="button" >Editar</button>
                                                         </form>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button class="btn btn-info" id="btnEditarUsuario" type="button" >Aplicar cambios</button>
-                                                    </div>
+
+                                                    
+
                                                 </div>
                                             </div>
                                         </div> 
@@ -505,7 +508,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group col-xs-6" id="grbtn3">
+                        <div class="input-group col-xs-5" id="grbtn3">
                             <span class="input-group-btn">
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevousuario">Nuevo</button> 
                                 <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editarUsuario">Editar</button> 
@@ -525,9 +528,11 @@
         </div>
 
         <br/>
+        <br/>
         <div id="logout">
-            <a href="Login.html" target="_self">Cerrar sesión</a>
+            <a href="Login.html" target="_self">Pulse Aqui Para Cerrar sesión</a>
         </div>
+
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#tabs').tab();
