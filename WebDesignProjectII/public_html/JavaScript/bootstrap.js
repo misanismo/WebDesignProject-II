@@ -526,10 +526,7 @@ $(function() {
                             text: vectorUsuarios[pos].apellidosUsuario,
                             align: 'left'
                         }),
-                        $('<td>', {//fila con la sede
-                            text: vectorUsuarios[pos].edadUsuario,
-                            align: 'left'
-                        }),
+                        
                         $('<td>', {//fila con la sede
                             text: vectorUsuarios[pos].privilegiosUsuario,
                             align: 'left'

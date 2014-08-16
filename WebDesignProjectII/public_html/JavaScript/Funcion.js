@@ -25,7 +25,7 @@ $(function()
                 }
             }
             if (existe === 0) {
-                alert('No existe un usuario registrado con los datos ingresados');
+                alert('Logueando como usuario diferente');
             }
         }
     });
