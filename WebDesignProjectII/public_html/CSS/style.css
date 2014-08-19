@@ -1,5 +1,5 @@
 body {
-    background-image: url("../fondo2.jpg");
+    background-image: url("../Imagenes/fondo2.jpg");
 	padding: 20px 0;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 #grbtn3{
-   margin-left: 285px;
+   margin-left: 232px;
 }
 
 #tablaUsuarios{
@@ -23,7 +23,7 @@ body {
 }
 
 #grbtn2{
-    margin-left: 230px;
+    margin-left: 232px;
 }
 
 #tablaEstudiantes{
@@ -34,7 +34,7 @@ body {
     margin-left: 100px;
 }
 #grbtn1{
-    margin-left: 285px;
+    margin-left: 232px;
 }
 
 #listaDashboard{

@@ -17,12 +17,16 @@
     </head>
     <body class="">
 
+        <!--Contenedor de imagen y titulo!-->
+
         <div class="container">
             <img id="logo" src="Imagenes/Logo.png" class="center-block" alt="Imagen responsive" >
             <h2 class = "text-center"> Universidad Tecnica Nacional</h2>
         </div>
 
         <br/>
+
+        <!--Pestañas principales de navegacion!-->
 
         <div class="container">
             <div id="content">
@@ -35,7 +39,7 @@
                 </ul>
                 <div id="my-tab-content" class="tab-content">
 
-                    <!--Tab del menu principal!-->
+                    <!--Pestaña del dashboard!-->
 
                     <div class="tab-pane active " id="dashboard">
                         <br/>
@@ -56,7 +60,7 @@
                         </div>
                     </div>
 
-                    <!--Tab De Carreras!-->
+                    <!--Pestaña de Carreras!-->
 
                     <div class="tab-pane" id="carreras"> 
                         <div class="container"> 
@@ -65,9 +69,9 @@
 
                                 </div>
 
-                                <!--Este modelo es el encargado de registrar las carreras!-->
-                                
-                                
+                                <!--Modelo que registra las carreras!-->
+
+
                                 <div class="modal fade"  id="nuevacarrera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -96,7 +100,7 @@
                                                                 <option>San Carlos</option>
                                                             </select>
                                                         </div>
-                                                        <button id="btnAgregarCarrera" class="btn btn-info center-block" type="button">Agregar</button>
+                                                        <button id="btnAgregarCarrera" data-dismiss="modal" class="btnModelos center-block" type="button">Agregar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -105,7 +109,7 @@
                                 </div> 
 
 
-                                <!--Este modelo se encarga de editar las carreras !-->
+                                <!--Modelo que edita las carreras !-->
 
 
                                 <div class="modal fade"  id="editarCarrera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -136,7 +140,7 @@
                                                                 <option>San Carlos</option>
                                                             </select>
                                                         </div>
-                                                        <button id="btnEditarCarrera" type="button" class="btn btn-info center-block">Editar</button>
+                                                        <button id="btnEditarCarrera" data-dismiss="modal" type="button" class="btnModelos center-block">Editar</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -147,10 +151,41 @@
                         </div> 
                         <br/>
 
-                        <!--Esta tabla contiene todos las carreras registradas en la base de datos!-->
+                        <!--Modelo que muestra los detalles de la carrera !-->
+
+                        <div class="modal fade"  id="detallecarrera">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+
+                                        <h4 class="text-center">Detalles de la carrera</h4>
+
+                                        <div class="modal-body">
+                                            <form id="frmAgregarCarrera">
+                                                <div class="form-group">
+                                                    <label for="txtCodCarreraDetallar">Código de la carrera:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtCodCarreraDetallar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txtNombreCarreraDetallar">Nombre de la carrera:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtNombreCarreraDetallar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txtSedeDetallar">Sede:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtSedeDetallar" >
+                                                </div>
+
+                                                <button type="button" class="btnModelos center-block" data-dismiss="modal">Aceptar</button>
+                                            </form>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
 
 
-
+                        <!--Tabla en la que se muestran las carreras guardadas en Local Storage!-->
 
 
                         <h3 class="text-center">Lista y Opciones de Carreras Registradas</h3>
@@ -176,31 +211,33 @@
                         </div>
 
 
-                        <div class="input-group col-xs-6" id="grbtn1">
+                        <!--Grupo de botones para las opciones a elegir!-->
+
+                        <div class="input-group col-xs-7" id="grbtn1">
 
                             <span class="input-group-btn">
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevacarrera">Nuevo</button>
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editarCarrera">Editar</button> 
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#nuevacarrera">Nuevo</button>
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#editarCarrera">Editar</button> 
                             </span>
                             <input id="txtEliminarCarrera" type="text" class="form-control" placeholder="Carrera a eliminar">
                             <span class="input-group-btn">
-                                <button id="btnEliminarCarrera" type="button" class="btn btn-info btn-sm">Eliminar</button>
+                                <button id="btnEliminarCarrera" type="button" class="btnGrupos btn-sm">Eliminar</button>
                             </span>
                             <input id="txtVerDetallesCarrera" type="text" class="form-control" placeholder="Carrera a detallar">
                             <span class="input-group-btn">
-                                <button id="btnVerDetallesCarrera" type="button" class="btn btn-info btn-sm">Ver detalles</button>
+                                <button id="btnVerDetallesCarrera" type="button" class="btnGrupos btn-sm">Detalles</button>
                             </span>
                         </div>
                     </div>
 
-                    <!--Tab de los estudiantes!-->
+                    <!--Pestaña de los estudiantes!-->
 
                     <div class="tab-pane" id="estudiantes">
                         <div class="container"> 
                             <div class="row">
                                 <div class="col-xs-6">
 
-                                    <!--Este modelo se encarga de almacenar los datos del estudiante!-->
+                                    <!--Modelo que registra los estudiantes!-->
 
                                     <div class="modal fade"  id="nuevoEstudiante" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -211,7 +248,9 @@
                                                     <div class="modal-body">
                                                         <form id="frmAgregarEstudiante">
                                                             <div class="form-group">
-                                                                <a href="C:\Users\misa9_000\Documents\U\Diseño Web\ProyectoWeb2prueba\public_html"><img id="logo" src="Imagenes/user.png" class="left" alt="Imagen responsive" ></a>
+
+                                                                <a href="C:\Users\misa9_000\Documents\U\Diseño Web\ProyectoWeb2prueba\public_html"><img id="logo" src="Imagenes/user.png" class="center-block" alt="Imagen responsive" ></a>
+
                                                                 <br/>
                                                                 <br/>
                                                                 <label for="txtCedulaEstudiante">Identificador:</label>
@@ -249,7 +288,7 @@
                                                                     <option>Nivel Avanzado</option>
                                                                 </select>
                                                             </div>
-                                                            <button id="btnAgregarEstudiante" type="button" class="btn btn-info center-block">Agregar</button>
+                                                            <button id="btnAgregarEstudiante" data-dismiss="modal" type="button" class="btnModelos center-block">Agregar</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -257,7 +296,7 @@
                                         </div> 
                                     </div>
 
-                                    <!--Este modal se encarga de editar los estudiantes registrados en la base de datos!-->
+                                    <!--Modelo que edita los estudiantes!-->
 
                                     <div class="modal fade"  id="editarEstudiante" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -268,6 +307,9 @@
                                                     <div class="modal-body">
                                                         <form id="frmEditarEstudiante">
                                                             <div class="form-group">
+
+                                                                <img id="logo" src="Imagenes/user.png" class="center-block" alt="Imagen responsive" >
+
                                                                 <label for="txtCedulaEstudianteEditar">Identificador:</label>
                                                                 <input type="text" class="form-control" id="txtCedulaEstudianteEditar"
                                                                        placeholder="Cédula">
@@ -303,20 +345,62 @@
                                                                     <option>Nivel Avanzado</option>
                                                                 </select>
                                                             </div>
-                                                            <button id="btnEditarEstudiante" type="button" data-dismiss="modal" class="btn btn-info center-block">Editar</button>
+                                                            <button id="btnEditarEstudiante" type="button" data-dismiss="modal" class="btnModelos center-block">Editar</button>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div> 
                                     </div>
-                                    <!---</div>!-->
+
                                 </div>
                             </div>	
                         </div>
                         <br/>
 
-                        <!--Esta tabla se encarga de mostrar la lista de los estudiantes almacenados en la base de datos!-->
+
+                        <!--Modelo que muestra los detalles de el estudiante !-->
+
+
+                        <div class="modal fade"  id="detalleestudiante">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                                        <h4 class="text-center">Detalles de el Estudiante</h4>
+                                        <div class="modal-body">
+                                            <form id="frmDetallesEstudiante">
+
+                                                <img id="logo" src="Imagenes/user.png" class="center-block" alt="Imagen responsive" >
+
+                                                <br/>
+                                                <br/>
+
+                                                <div class="form-group">
+                                                    <label for="txtCedulaEstudianteDetallar">Cédula:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtCedulaEstudianteDetallar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txtNombreEstudianteDetallar">Nombre:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtNombreEstudianteDetallar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txtApellidosEstudianteDetallar">Apellidos:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtApellidosEstudianteDetallar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="txtNivelInglesDetallar">Nivel de inglés:</label>
+                                                    <input readonly="" type="text" class="form-control" id="txtNivelInglesDetallar">
+                                                </div>
+                                                <button type="button" class="btnModelos center-block" data-dismiss="modal">Aceptar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!--Tabla que muestra los estudiantes almacenados en el Local Storage!-->
 
                         <h3 class="text-center">Lista y Opciones de Estudiantes Registrados</h3> 
 
@@ -342,23 +426,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--Grupo de botones con las opciones a elegir!-->
+
                         <div class="input-group col-xs-7" id="grbtn2">
                             <span class="input-group-btn">
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevoEstudiante">Nuevo</button>
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editarEstudiante">Editar</button> 
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#nuevoEstudiante">Nuevo</button>
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#editarEstudiante">Editar</button> 
                             </span>
                             <input id="txtEliminarEstudiante" type="text" class="form-control" placeholder="Estudiante a eliminar">
                             <span class="input-group-btn">
-                                <button id="btnEliminarEstudiante" type="button" class="btn btn-info btn-sm">Eliminar</button>
+                                <button id="btnEliminarEstudiante" type="button" class="btnGrupos btn-sm">Eliminar</button>
                             </span>
                             <input id="txtVerDetallesEstudiante" type="text" class="form-control" placeholder="Estudiante a detallar">
                             <span class="input-group-btn">
-                                <button id="btnVerDetallesEstudiante" type="button" class="btn btn-info btn-sm">Ver detalles</button>
+                                <button id="btnVerDetallesEstudiante" type="button" class="btnGrupos btn-sm">Detalles</button>
                             </span>
                         </div>
                     </div>
 
-                    <!--Este el taba de los usuarios!-->
+                    <!--Pestaña de los Usuarios!-->
 
                     <div class="tab-pane" id="usuarios">
                         <div class="container"> 
@@ -366,7 +453,7 @@
                                 <div class="col-xs-6">
 
 
-                                    <!--Este modelo se encarga de registrar los usuarios!-->
+                                    <!--Modelo que registra los usuarios!-->
 
                                     <div class="modal fade"  id="nuevousuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -403,18 +490,21 @@
                                                                 <input type="password" class="form-control" id="txtContrasennaUsuario" 
                                                                        placeholder="Contraseña">
                                                             </div>
-                                                            <button class="btn btn-info center-block" id="btnAgregarUsuario" type="button" >Agregar</button>
+                                                            <div class="form-group">
+                                                                <label for="txtVerificaContrasennaUsuario">Contraseña:</label>
+                                                                <input type="password" class="form-control" id="txtVerificaContrasennaUsuario" 
+                                                                       placeholder="Verificar Contraseña">
+                                                            </div>
+                                                            
+                                                            <button class="btnModelos center-block" data-dismiss="modal" id="btnAgregarUsuario" type="button" >Agregar</button>
                                                         </form>
                                                     </div>
-
-                                                    
-
                                                 </div>
                                             </div>
                                         </div> 
                                     </div>
 
-                                    <!--Este modelo se encarga de editar a los usuarios!-->
+                                    <!--Modelo que edita los usuarios!-->
 
                                     <div class="modal fade"  id="editarUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -451,18 +541,63 @@
                                                                 <input type="password" class="form-control" id="txtContrasennaUsuarioEditar" 
                                                                        placeholder="Contraseña">
                                                             </div>
-                                                            <button class="btn btn-info center-block" id="btnEditarUsuario" type="button" >Editar</button>
+                                                           
+                                                            <button id="btnEditarUsuario" type="button" data-dismiss="modal" class="btnModelos center-block" >Editar</button>
                                                         </form>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div> 
                                     </div>
-                                    <!--</div>!-->
                                 </div>
                             </div>	
                         </div>
                         <br/>
+
+                        <!--Modelo que muestra los detalles del usuario!-->
+
+
+                        <div class="modal fade"  id="detalleUsuario">
+                            <div class="modal-dialog">
+                                <div class="modal-content"> 
+                                    <h4 class="text-center">Detalles de usuarios</h4>
+                                    <div class="modal-body">
+                                        <form id="frmDetallesUsuario">
+                                            <!--Cedula!-->
+                                            <div class="form-group">
+                                                <label for="txtCedulaUsuarioDetalles">Cédula:</label>
+                                                <input readonly="" type="text" class="form-control" id="txtCedulaUsuarioDetalles">
+                                            </div>
+                                            <!--Nombre!-->
+                                            <div class="form-group">
+                                                <label for="txtNombreUsuarioDetalles">Nombre:</label>
+                                                <input readonly="" type="text" class="form-control" id="txtNombreUsuarioDetalles">
+                                            </div>
+                                            <!--Apellidos!-->
+                                            <div class="form-group">
+                                                <label for="txtApellidosUsuarioDetalles">Apellidos:</label>
+                                                <input readonly="" type="text" class="form-control" id="txtApellidosUsuarioDetalles">
+                                            </div>
+                                            <!--Privilegios!-->
+                                            <div class="form-group">
+                                                <label for="txtPrivilegiosUsuarioDetalles">Privilegios:</label>
+                                                <input readonly="" type="text" class="form-control" id="txtPrivilegiosUsuarioDetalles">
+                                            </div>
+                                            <!--Contraseña!-->
+                                            <div class="form-group">
+                                                <label for="txtContrasennaUsuarioDetalles">Contraseña:</label>
+                                                <input readonly="" type="password" class="form-control" id="txtContrasennaUsuarioDetalles">
+                                            </div>
+                                            <button type="button" class="btnModelos center-block" data-dismiss="modal">Aceptar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!--Tabla que muestra los usuarios guardados en el Local Storage-->
+                        
 
                         <h3 class="text-center">Lista y Opciones de Usuarios Registrados</h3>
 
@@ -487,18 +622,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group col-xs-6" id="grbtn3">
+                        
+                        <!--Grupo de botones con las opciones a elegir!-->
+                        
+                        
+                        <div class="input-group col-xs-7" id="grbtn3">
                             <span class="input-group-btn">
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#nuevousuario">Nuevo</button> 
-                                <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editarUsuario">Editar</button> 
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#nuevousuario">Nuevo</button> 
+                                <button class="btnGrupos btn-sm" data-toggle="modal" data-target="#editarUsuario">Editar</button> 
                             </span>
                             <input id="txtEliminarUsuario" type="text" class="form-control" placeholder="Usuario a eliminar">
                             <span class="input-group-btn">
-                                <button id="btnEliminarUsuario" type="button" class="btn btn-info btn-sm">Eliminar</button>
+                                <button id="btnEliminarUsuario" type="button" class="btnGrupos btn-sm">Eliminar</button>
                             </span>
                             <input id="txtVerDetallesUsuario" type="text" class="form-control" placeholder="Usuario a detallar">
                             <span class="input-group-btn">
-                                <button id="btnVerDetallesUsuario" type="button" class="btn btn-info btn-sm">Ver detalles</button>
+                                <button id="btnVerDetallesUsuario" type="button" class="btnGrupos btn-sm">Detalles</button>
                             </span>
                         </div>
                     </div>
@@ -508,6 +647,9 @@
 
         <br/>
         <br/>
+        
+        <!--Enlace para cerrar la sesión-->
+        
         <div id="logout">
             <a href="Login.html" target="_self">Pulse Aqui Para Cerrar sesión</a>
         </div>
